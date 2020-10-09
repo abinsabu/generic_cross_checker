@@ -1,0 +1,47 @@
+
+<f:form action="show" name="contentFilter">
+	<div class="form-group col-md-5">
+		<label for="manualDateStart">Select</label>
+		<div class="input-group input-group-sm">
+			<f:form.select additionalAttributes="{required: 'required'}"
+				style="width:400px" name="externalDbTables" options="{dbList}"
+				multiple="true" value="{filterFormArr.externalDbTables}" size="10" />
+		</div>
+	</div>
+	<div class="form-group col-md-3">
+		<label for="manualDateStart"><f:translate
+				key="LLL:EXT:lang/locallang_common.xlf:from" /></label>
+		<div class="input-group input-group-sm">
+			<f:form.textfield additionalAttributes="{required: 'required'}"
+				name="filterDateFrom" value="{filterFormArr.filterDateFrom}"
+				id="manualDateStart"
+				class="form-control input-sm t3js-datetimepicker t3js-clearable"
+				data="{date-type: 'datetime', date-offset: 0}" />
+			<span class="input-group-btn"> <label class="btn btn-default"
+				for="manualDateStart"> <span class="fa fa-calendar"></span>
+			</label>
+			</span>
+		</div>
+
+	</div>
+	<div class="form-group col-md-3">
+		<label for="manualDateStop"><f:translate
+				key="LLL:EXT:lang/locallang_common.xlf:to" /></label>
+		<div class="input-group input-group-sm">
+			<f:form.textfield name="filterDateTo"
+				value="{filterFormArr.filterDateTo}" id="manualDateStop"
+				class="form-control input-sm t3js-datetimepicker t3js-clearable"
+				data="{date-type: 'datetime', date-offset: 0}" />
+			<f:form.hidden property="endTimestamp" />
+			<span class="input-group-btn"> <label class="btn btn-default"
+				for="manualDateStop"> <span class="fa fa-calendar"></span>
+			</label>
+			</span>
+		</div>
+	</div>
+
+	<div class="form-group col-md-3">
+		<f:form.submit id="submit-constraint" value="Send"
+			class="btn btn-default btn-sm" />
+	</div>
+</f:form>

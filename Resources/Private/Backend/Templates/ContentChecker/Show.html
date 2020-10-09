@@ -1,0 +1,24 @@
+
+<f:layout name="Default" />
+<f:section name="content">
+
+	<f:if condition="{connectionStatus}==1">
+		<f:then>
+			<div class="col-md-12">
+				<div id="typo3-docheader">
+					<div class="typo3-docheader-buttons">
+						<b> <f:translate key="mlang_labels_moduleFormHead" /></b>
+					</div>
+				</div>
+				<f:render partial="Forms"
+					arguments="{dbList: dbList,filterFormArr:filterFormArr}" />
+			</div>
+			<div class="col-md-12">
+				<f:render partial="DataList" arguments="{listData: listData}" />
+			</div>
+		</f:then>
+		<f:else>
+			<f:flashMessages as="flashMessages" />
+		</f:else>
+	</f:if>
+</f:section>
