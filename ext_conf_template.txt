@@ -1,0 +1,8 @@
+# cat=connection/configure; type=string; label=Database Host Name
+remote_hostName =
+# cat=connection/configure; type=string; label=Database Username
+remote_userName =
+# cat=connection/configure; type=string; label=Database Password
+remote_password =
+# cat=connection/configure; type=string; label=Database Name
+remote_databaseName =
